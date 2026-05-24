@@ -1,0 +1,260 @@
+/* Genel Sayfa Düzeni */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Arka Plan Videosu */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Menü Ayarları */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Menü Ayarları */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Menü Listesi */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #9c0505;
+}
+
+/* Mobil Menü Aç-Kapat */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-text {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+/* İçerik ve Buton */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.highlight {
+    color: #ffffff;
+}
+
+.discover-btn {
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #9c0505;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(156, 5, 5, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.discover-btn:hover {
+    background-color: #b50606;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(156, 5, 5, 0.4);
+}
+
+/* Footer */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+}
+
+/* 📌 Responsive Tasarım */
+
+/* Mobilde Logo ve Menü Ortalanması */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        /* Menü ve logo dikey sıraya yerleşecek */
+        justify-content: flex-start;
+        /* Menü ve logo yukarıya hizalanacak */
+        align-items: center;
+        /* Hem yatayda hem dikeyde ortalama */
+        padding: 10px;
+    }
+
+    .logo {
+        margin-top: 1px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    /* Menü Toggle Butonu (Mobil) */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    /* Mobilde Menü Düzeni */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        display: none;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Başlık ve Buton */
+h1 {
+    font-size: 30px;
+    margin-top: 120px;
+    letter-spacing: -0.5px;
+}
+
+.discover-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+/* Arka Plan Videosu */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobilde Arka Plan Resmi */
+@media (max-width: 768px) {
+    .video-background {
+        display: none;
+    }
+
+    body {
+        background-image: url('arkaplanresim.jpg');
+        background-size: cover;
+        /* Resmin sayfayı kaplamasını sağlar */
+        background-position: center center;
+    }
+}

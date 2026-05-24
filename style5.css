@@ -1,0 +1,317 @@
+/* Genel Sayfa Düzeni */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menü Ayarları */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Menü Listesi */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #9c0505;
+}
+
+/* Mobil Menü Aç-Kapat */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-text {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+/* Sayfa İçeriği */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: rgb(90, 15, 15);
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-top: 100px;
+    color: #9c0505;
+    text-shadow: 2px 2px 4px rgba(85, 5, 5, 0.3);
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.address {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Google Harita */
+.map iframe {
+    width: 175vh;
+    height: 60vh;  /* Yüksekliği ekran yüksekliğine göre ayarlanır */
+    border: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Sayfanın İçeriği */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Footer Genel Ayarları */
+.footer {
+    background: linear-gradient(45deg, #000000, #290404);
+    color: #fff;
+    padding: 50px 10px;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #9c0505;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Footer İçeriği */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+.footer-contact img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.footer-contact a:hover {
+    color: #9c0505;
+}
+
+.footer-contact img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #fafafa);
+}
+
+/* 📌 Responsive Tasarım */
+@media (max-width: 768px) {
+    /* Menü ve Logo Düzeni */
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-top: 1px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    /* Menü Toggle Butonu (Mobilde) */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    /* Menü Düzeni (Mobilde) */
+    .menu {
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    /* Menü Elemanları */
+    .menu li {
+        margin: 10px 0;
+    }
+
+    /* Harita Düzeni (Mobilde) */
+    .map-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .map {
+        width: 90%;
+        max-width: 600px;
+        height: 400px;
+        border: 2px solid #9c0505;
+        border-radius: 10px;
+    }
+}
+
+/* Modern Branch Styles */
+.branch-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 40px;
+    text-align: center;
+}
+
+.branch-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: none;
+    padding-top: 0;
+}
+
+.branch-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.map-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+}
+
+.modern-map {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+}
+
+.map-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #b30000, #ff4d4d);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: -25px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 8px 20px rgba(179, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(179, 0, 0, 0.4);
+    color: white;
+}

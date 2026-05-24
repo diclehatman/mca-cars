@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Favicon Bağlantısı -->
+         <link rel="icon" href="logo.png" type="image/x-icon">
+    <title>İletişim Formu</title>
+    <link rel="stylesheet" href="global.css"> <!-- CSS Dosyası Bağlantısı -->
+   
+
+    <!-- UI Modernization Global Overrides -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+</head>
+<body class="contact-page-body">
+
+            <div class="menu-container solid-header">
+                <div class="logo">
+                    <a href="index.html"><img src="logo.png" alt="MCA CARS Logo" loading="lazy"></a>
+        
+            </div>
+                
+                <button class="menu-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="subemiz.html">Şubemiz</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <main class="contact-container">
+        <div class="form-wrapper">
+                <h2>İletişim Formu</h2>
+                <form action="https://formspree.io/f/xrbeknap" method="POST">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="first-name">Ad:</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Adınızı girin" required>
+                        </div>
+            
+                        <div class="input-group">
+                            <label for="last-name">Soyad:</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Soyadınızı girin" required>
+                        </div>
+                    </div>
+        
+                    <div class="input-group">
+                        <label for="email">E-posta:</label>
+                        <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+                    </div>
+        
+                    <div class="input-group">
+                        <label for="message">Mesaj:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın" required></textarea>
+                    </div>
+        
+                    <button type="submit" class="btn-primary" style="width: 100%; border-radius: 10px;"><i class="fa-solid fa-paper-plane"></i> Mesaj Gönder</button>
+                </form>
+            </div>
+    </main>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <div class="footer-links">
+                    <a href="tel:+902126594096">0 (212) 659 40 96</a>
+                    <a href="tel:+905453586238">0 (545) 358 62 38</a>
+                </div>
+            </div>
+            
+            <div class="footer-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:mca34cars@gmail.com">mca34cars@gmail.com</a>
+            </div>
+            
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/Sp5Wizs2Cor9QthQ6" target="_blank">Göztepe, Bağcılar/İstanbul</a>
+            </div>
+            
+            <div class="footer-item">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/mcacars34/" target="_blank">@mcacars34</a>
+            </div>
+            
+            <div class="footer-item">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/people/Mcacars/100085967933890/?mibextid=wwXIfr&rdid=nf2iir2Cdwouw30C&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EHnb88mKK%2F%3Fmibextid%3DwwXIfr" target="_blank">MCA CARS</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MCA CARS. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bağlantısı -->
+    <script src="script.js"></script>
+</body>
+</html>
